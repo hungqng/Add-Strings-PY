@@ -48,3 +48,26 @@ class Solution:
         # if carry:
         #     res.append(carry)
         # return ''.join(str(d) for d in res)[::-1]
+
+        # Solution 3
+        # N, M = len(num1), len(num2)
+        # a, b = N - 1, M - 1
+        # carry = 0
+        # output = ""
+        # while a >= 0 or b >= 0:
+        #     i, j = 0, 0
+        #     if a >= 0:
+        #         i = ord(num1[a]) -48
+        #         a -= 1
+        #     if b >= 0:
+        #         j = ord(num2[b]) - 48
+        #         b -= 1
+        #     tmp = i + j + carry
+        #     if tmp > 9:
+        #         carry = 1
+        #     else:
+        #         carry = 0
+        #     output = str(tmp)[-1] + output
+        # if carry:
+        #     output = "1" + output
+        # return output
